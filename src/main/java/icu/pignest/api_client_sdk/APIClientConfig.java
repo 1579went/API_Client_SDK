@@ -1,7 +1,7 @@
-package com.pignest.api_client_sdk;
+package icu.pignest.api_client_sdk;
 
-import com.pignest.api_client_sdk.client.API_Client;
-import com.pignest.api_client_sdk.service.ApiService;
+import icu.pignest.api_client_sdk.client.API_Client;
+import icu.pignest.api_client_sdk.service.ApiService;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;

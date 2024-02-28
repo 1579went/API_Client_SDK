@@ -1,4 +1,4 @@
-package com.pignest.api_client_sdk.utils;
+package icu.pignest.api_client_sdk.utils;
 
 import java.security.SecureRandom;
 import java.util.Base64;

@@ -1,4 +1,4 @@
-package com.pignest.api_client_sdk;
+package icu.pignest.api_client_sdk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

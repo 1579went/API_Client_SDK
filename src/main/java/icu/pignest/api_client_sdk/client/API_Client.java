@@ -1,4 +1,4 @@
-package com.pignest.api_client_sdk.client;
+package icu.pignest.api_client_sdk.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

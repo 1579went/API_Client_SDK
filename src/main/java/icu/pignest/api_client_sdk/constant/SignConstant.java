@@ -1,4 +1,4 @@
-package com.pignest.api_client_sdk.constant;
+package icu.pignest.api_client_sdk.constant;
 
 /**
  * @author went

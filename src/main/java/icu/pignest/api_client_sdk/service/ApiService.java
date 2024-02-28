@@ -1,13 +1,13 @@
-package com.pignest.api_client_sdk.service;
+package icu.pignest.api_client_sdk.service;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
-import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONObject;
-import com.pignest.api_client_sdk.client.API_Client;
-import com.pignest.api_client_sdk.constant.ErrorCode;
-import com.pignest.api_client_sdk.exception.BusinessException;
-import com.pignest.api_client_sdk.utils.SignUtils;
+import icu.pignest.api_client_sdk.client.API_Client;
+import icu.pignest.api_client_sdk.constant.ErrorCode;
+import icu.pignest.api_client_sdk.exception.BusinessException;
+import icu.pignest.api_client_sdk.utils.SignUtils;
+import icu.pignest.api_client_sdk.constant.SignConstant;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.apache.commons.lang3.StringUtils;
@@ -17,8 +17,6 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.pignest.api_client_sdk.constant.SignConstant.*;
 
 /**
  * @author went
@@ -111,13 +109,13 @@ public class ApiService{
      */
     private Map<String, String> getHeaderMap(API_Client apiClient) {
         Map<String, String> hashMap = new HashMap<>();
-        hashMap.put(ACCESSKEY, apiClient.getAccessKey());
+        hashMap.put(SignConstant.ACCESSKEY, apiClient.getAccessKey());
         // 一定不能直接发送
         //hashMap.put("secretKey", secretKey);
-        hashMap.put(NONCE, SignUtils.getNonceStr(7));
-        hashMap.put(BODY, enCodeRequestParams(requestParams));
-        hashMap.put(TIMESTAMP, String.valueOf(System.currentTimeMillis() / 1000));
-        hashMap.put(SIGN, SignUtils.getSign(hashMap,apiClient.getSecretKey()));
+        hashMap.put(SignConstant.NONCE, SignUtils.getNonceStr(7));
+        hashMap.put(SignConstant.BODY, enCodeRequestParams(requestParams));
+        hashMap.put(SignConstant.TIMESTAMP, String.valueOf(System.currentTimeMillis() / 1000));
+        hashMap.put(SignConstant.SIGN, SignUtils.getSign(hashMap,apiClient.getSecretKey()));
         return hashMap;
     }
 

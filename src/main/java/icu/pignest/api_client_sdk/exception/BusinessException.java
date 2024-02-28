@@ -1,7 +1,7 @@
-package com.pignest.api_client_sdk.exception;
+package icu.pignest.api_client_sdk.exception;
 
 
-import com.pignest.api_client_sdk.constant.ErrorCode;
+import icu.pignest.api_client_sdk.constant.ErrorCode;
 import lombok.Getter;
 
 import java.io.Serial;

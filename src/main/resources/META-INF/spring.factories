@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration =\
-   com.pignest.api_client_sdk.APIClientConfig
+   icu.pignest.api_client_sdk.APIClientConfig
